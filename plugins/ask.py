@@ -64,7 +64,8 @@ class AskSearch(object):
         except Exception as e:
             print(e)
             sys.exit(4)
-        
+
+        r.encoding = 'utf-8'
         self.results = r.content.decode(r.encoding)
         self.totalresults += self.results
     
